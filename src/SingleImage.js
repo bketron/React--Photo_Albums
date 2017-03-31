@@ -128,7 +128,9 @@ export default React.createClass({
 		return (
 			<div style={styles.main}>
 				{console.log(this.props.match.params.photoId)}
-				<button style={styles.backButton} onClick={this.handleBack} type="button"><i style={styles.navIconRight} className="fa fa-chevron-left" style={styles.icon} aria-hidden="true"></i> Album {this.props.match.params.albumIndex}</button>
+				<Link to={'/album/' + this.props.match.params.albumIndex}>
+					<button style={styles.backButton} type="button"><i style={styles.navIconRight} className="fa fa-chevron-left" style={styles.icon} aria-hidden="true"></i> Album {this.props.match.params.albumIndex}</button>
+				</Link>
 
 				<div style={styles.navButtons} className="navButtons">
 					<Link style={styles.navLeft} to={this.prevPic()}><i className="fa fa-caret-left" aria-hidden="true"></i></Link>
